@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div>
+  <ul className={styles.FeedbackOptions}>
     {options.map(option => (
-      <button type="button" onClick={onLeaveFeedback} key={option}>
-        {option}
-      </button>
+      <li key={option}>
+        <button
+          className={styles.button}
+          type="button"
+          onClick={onLeaveFeedback}
+        >
+          {option}
+        </button>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 FeedbackOptions.propTypes = {

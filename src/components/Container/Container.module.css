@@ -1,3 +1,4 @@
 .Container {
-  background-color: brown;
+  max-width: 500px;
+  margin: auto;
 }
