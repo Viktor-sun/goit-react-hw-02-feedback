@@ -4,7 +4,7 @@ import styles from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <>
-    <h3 className={styles.title}>Statistics</h3>
+    <h2 className={styles.title}>Statistics</h2>
     <ul className={styles.list}>
       <li className={styles.item}>
         Good: <span className={styles.number}>{good}</span>
