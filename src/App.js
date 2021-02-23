@@ -8,7 +8,7 @@ import Container from './components/Container';
 class App extends Component {
   state = { good: 0, neutral: 0, bad: 0 };
 
-  handlerIncrement = e => {
+  handleIncrement = e => {
     const stateProperty = e.target.textContent.toLowerCase();
     return this.setState(prevState => {
       return { [stateProperty]: prevState[stateProperty] + 1 };
@@ -37,7 +37,7 @@ class App extends Component {
         <Container>
           <FeedbackOptions
             options={nameOptions}
-            onLeaveFeedback={this.handlerIncrement}
+            onLeaveFeedback={this.handleIncrement}
           />
           {totalValue ? (
             <Statistics
