@@ -5,6 +5,8 @@ import Section from './components/Section';
 import Notification from './components/Notification';
 import Container from './components/Container';
 
+const nameOptions = ['Good', 'Neutral', 'Bad'];
+
 class App extends Component {
   state = { good: 0, neutral: 0, bad: 0 };
 
@@ -30,7 +32,6 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const totalValue = this.countTotalFeedback();
     const feedbackPercentage = this.countPositiveFeedbackPercentage();
-    const nameOptions = ['Good', 'Neutral', 'Bad'];
 
     return (
       <Section title="Please leave feedback">
